@@ -20,10 +20,8 @@ ul{
     padding: 0;
 }
 nav{
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: fixed;
+    background: white;
     width: 100%;
     z-index: 100;
 }
@@ -97,10 +95,12 @@ header{
 
 .discover{
     height:100%;
-    background: url("images/cute-boy-smiling-in-mirror.png") no-repeat;
+    background: url("images/cute-boy-smiling-in-mirror.jpg") no-repeat;
     background-size: cover;
     color:white;
     text-align: center;
+    position: relative;
+
 
 }
 h2{
@@ -109,9 +109,17 @@ h2{
 .discover p {
     font-size: 1.5em;
 }
+
+header .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .text{
     height: 100%;
-    background: rgba(0,0,0,0.35)
+    width: 100%;
+    background: rgba(0,0,0,0.35);
 }
 
 .your-project{
@@ -131,14 +139,12 @@ h2{
     color:white;
     width: 294px;
     height: 55px;
-    background: inherit;
+    background: rgba(0,0,0,0);
     border: 2px white solid;
-
-
 }
 
 .btn-discover:hover{
-    background: rgba(255,255,255,0.72);
+    background: rgba(255,255,255,0.30);
 }
 
 /********************************** SELECTION ****************************************/
@@ -214,7 +220,12 @@ h3{
 
 }
 /********************************** 3D *****************************/
+.outil3D .img{
 
+    height:200px;
+    background: url("images/pexels-gabby-k-5331199.jpg") no-repeat center center;
+    background-size: cover;
+}
 .btn-action{
     width: 294px;
     height: 55px;
@@ -259,12 +270,16 @@ h3{
 }
 
 /******************************* About *****************************************/
+
+
 .about {
     text-align: center;
     margin-bottom: 2.5em;
 }
-.about img{
-    width: 100%;
+.about .img{
+    height: 200px;
+    background: url("images/beautiful-shot-of-modern-house-bathroom-with-technology-and-art.png") no-repeat center center;
+    background-size: cover;
 }
 
 h6{
@@ -387,13 +402,68 @@ footer h6{
     .values{
         display: flex;
         flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 2em 5em;
+
     }
     .selection-group{
         display: flex;
+        justify-content: center;
     }
     .selection{
         width: 196px;
         margin: 0 0.5em;
         flex-direction: column;
+    }
+    .articles{
+        justify-content: center;
+    }
+
+}
+@media (min-width: 1201px) {
+    .burger{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
+
+    .navbar-down{
+        display: flex;
+        justify-content: center;
+    }
+    .about .btn-info,.outil3D .btn-action{
+        width: 244px;
+    }
+    .outil3D {
+        position: relative;
+        height: 600px;
+        overflow: hidden;
+    }
+    .outil3D h3{
+        margin-top: 0;
+        text-align: left;
+    }
+    .outil3D .description {
+        position: absolute;
+        top:50px;
+        left:50%;
+        background: white;
+        padding: 3em 2em;
+        text-align: left;
+    }
+
+    .about{
+        display: flex;
+    }
+    .about .img{
+        width: 100%;
+    }
+    .about,.about h3{
+        text-align: left;
+    }
+
+    .about .description{
+        padding: 0 2em;
     }
 }
