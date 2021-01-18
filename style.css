@@ -1,0 +1,399 @@
+@font-face {
+    font-family: "Sofia";
+    src: url("Sofia-Regular.ttf");
+}
+
+body{
+    margin:0;
+    box-sizing: border-box;
+    --primary: #bf2604;
+    --secondary : #921b00;
+    font-family: "Raleway",sans-serif;
+    text-align: center;
+
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+nav{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 100;
+}
+button {
+    border:none;
+    background-color: inherit;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+
+/***********************************************HEADER *******************************/
+
+.brand{
+    font-family: "Sofia",sans-serif;
+    color: var(--primary);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    z-index: -2;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.navbar-up{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.mobile{
+    display: none;
+}
+.cart{
+    position:relative;
+}
+.cart span{
+    background: var(--primary);
+    color:white;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    top:-15px;
+    right:-5px;
+}
+.cart p{
+    display: none;
+}
+.nav-item{
+    margin:0 0.75em
+}
+
+.nav-link svg:hover{
+    color:var(--primary)
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.carousel{
+    flex:1;
+    padding: 0;
+}
+
+.discover{
+    height:100%;
+    background: url("images/cute-boy-smiling-in-mirror.png") no-repeat;
+    background-size: cover;
+    color:white;
+    text-align: center;
+
+}
+h2{
+    font-size: 2em;
+}
+.discover p {
+    font-size: 1.5em;
+}
+.text{
+    height: 100%;
+    background: rgba(0,0,0,0.35)
+}
+
+.your-project{
+    position: absolute;
+    bottom:10px;right:10px;
+    background: white;
+    border-radius: 90px;
+    padding:0.5em;
+}
+
+.your-project a{
+    color: var(--primary);
+
+}
+.btn-discover{
+    font-size: 20px;
+    color:white;
+    width: 294px;
+    height: 55px;
+    background: inherit;
+    border: 2px white solid;
+
+
+}
+
+.btn-discover:hover{
+    background: rgba(255,255,255,0.72);
+}
+
+/********************************** SELECTION ****************************************/
+
+h3{
+    font-family: "Sofia",sans-serif;
+    font-size: 2.25em;
+    color: var(--primary);
+    text-align: center;
+    line-height: 1;
+}
+.selection-group{
+    margin: 2.5em 0;
+}
+.selection{
+    display: flex;
+    margin-bottom: 1.25em ;
+    text-align: left;
+}
+
+.selection h5{
+    font-size: 1.25em;
+    font-weight: normal;
+    margin:0;
+}
+.selection p{
+    font-size: 1.5em;
+    font-weight: 500;
+    margin:0;
+}
+
+/**************************Conception ***********************************************/
+.conception{
+    margin-bottom: 2.5em;
+    text-align: center;
+}
+
+
+.conception-type{
+    width: 375px;
+    height:487px;
+    margin:0 0.5em;
+    margin-bottom: 1.25em;
+    background-size: cover;
+}
+
+.conception h4{
+    font-size: 1.75em;
+    color:white;
+    margin: 0;
+}
+
+.conception .text{
+    box-sizing: border-box;
+    display: flex;
+    padding: 3em 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn-info{
+    width: 294px;
+    height: 55px;
+    background: white;
+    color:var(--primary);
+    font-size: 1.25em;
+    border: 2px var(--primary) solid;
+}
+
+.btn-info:hover{
+    color:white;
+    background: var(--primary);
+
+}
+/********************************** 3D *****************************/
+
+.btn-action{
+    width: 294px;
+    height: 55px;
+    background: var(--primary);
+    color:white;
+    font-size: 1.25em;
+    border: 2px var(--primary) solid;
+}
+
+.btn-action:hover{
+    background: var(--secondary);
+}
+/************************************************** ARTICLE **************************************/
+.blog{
+    margin-bottom: 2.5em;
+}
+
+.articles{
+    display: flex;
+}
+.article{
+    width: 300px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.22);
+    margin:0 0.5em;
+    margin-bottom: 1.25em;
+}
+.article h5{
+    margin-top: 0;
+}
+.article .description{
+    padding: 1em;
+    text-align: left;
+}
+.article h5{
+    font-size: 1.25em;
+    font-weight: 600;
+}
+
+.article a{
+    color: var(--primary);
+
+}
+
+/******************************* About *****************************************/
+.about {
+    text-align: center;
+    margin-bottom: 2.5em;
+}
+.about img{
+    width: 100%;
+}
+
+h6{
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+
+/************************************************** SHOWROOM *************************************************************/
+
+.showrooms{
+    text-align: center;
+    background : var(--primary);
+    color:white;
+    padding: 3em 0;
+}
+
+.showrooms p{margin: 0}
+.showrooms h4{
+    font-size: 1.75em;
+}
+
+
+/*************************************** VALUES ******************************************/
+.values{
+    padding:2.5em 0;
+}
+.value svg{
+    width: 50px;
+}
+.value{
+    display: flex;
+    align-items: center;
+    font-family: "Sofia",sans-serif;
+    font-size: 1.25em;
+}
+
+.value svg{
+    margin: 1.25em 1em;
+}
+
+
+/************************************************* FOOTER **********************************/
+
+.footer-section{
+    background: #222;
+    color:white
+}
+.newsletter{
+    padding: 2em 0;
+}
+
+.join{
+    margin:2em 0;
+}
+.social-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-group a{
+    margin:0 0.75em;
+
+}
+
+.newsletter-form{
+    width:294px;
+    height: 50px;
+}
+.newsletter input{
+    height: 100%;
+    border: none;
+    padding: 0;
+}
+
+::placeholder{
+    font-size: 0.75em;
+}
+.newsletter button{
+    height:100%;
+    color:white;
+    background: black;
+    padding: 1em;
+}
+footer h4{
+    font-weight: 400;
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.newsletter p{
+    font-size: 0.75em;
+}
+
+.footer-link a{
+    color:white;
+    font-size: 0.75em;
+}
+
+.footer-link{
+    margin-top: 2em;
+}
+
+.footer-link a:hover{
+    color:var(--primary)
+}
+footer h6{
+    font-size:16px;
+    padding: 1em;
+}
+
+
+@media (min-width: 481px) {
+    .conception-type-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .values{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    .selection-group{
+        display: flex;
+    }
+    .selection{
+        width: 196px;
+        margin: 0 0.5em;
+        flex-direction: column;
+    }
+}
