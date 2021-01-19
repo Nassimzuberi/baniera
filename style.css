@@ -10,16 +10,18 @@ body{
     --secondary : #921b00;
     font-family: "Raleway",sans-serif;
     text-align: center;
-
 }
 a{
     text-decoration: none;
     color:black;
     box-sizing: border-box;
+    transition: all 0.3s;
+
 }
 ul{
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 nav{
     position: fixed;
@@ -33,7 +35,20 @@ button {
     transition: all 0.2s;
     cursor: pointer;
 }
+.icon {
+    display: inline-block;
+    width: 2em;
+    height: 2.25em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    transition: all 0.2s;
 
+}
+
+nav .icon:hover{
+    color: var(--primary)
+}
 /************************************************* BUTTON *********************************/
 
 .btn{
@@ -89,17 +104,18 @@ button {
 .navbar{
     display: flex;
     align-items: center;
+
 }
 .navbar-up{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+}
+.navbar-up,.navbar-down{
+    padding: 1em 0;
+}
 
-}
-.navbar-down .nav-item{
-    padding: 0.5em 0;
-}
 .nav-mobile{
     padding: 1em 0;
     background: rgba(0,0,0,0.2);
@@ -149,7 +165,27 @@ button {
 .nav-link svg:hover{
     color:var(--primary)
 }
+.navbar-up .nav-link:hover{
+    color: var(--primary);
+}
+.navbar-down .nav-link{
+    position: relative;
+}
+.navbar-down .nav-link:before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;left:0;
+    width: 0;
+    height: 1px;
+    background: black;
+    transition: all 0.4s;
 
+
+}
+.navbar-down .nav-link:hover:before{
+    width: 100%;
+}
 header{
     display: flex;
     flex-direction: column;
@@ -171,7 +207,7 @@ header{
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: url("images/cute-boy-smiling-in-mirror.jpg") no-repeat center center;
+    background: url("images/mobile/home.png") no-repeat center center;
     background-size: cover;
     filter: contrast(75%) brightness(70%);
 }
@@ -239,22 +275,27 @@ h3{
 
 }
 .conception .meubles{
-    background: url('images/poster-with-vertical-frames-on-empty-white-wall-in-living-room-interior-with-blue-velvet-armchair-3d-rendering.png') no-repeat center center;
+    background: url('images/mobile/meubles.png') no-repeat center center;
     background-size: cover;
 
 }
 
 .conception .baignoires{
-    background: url('images/3d-contemporary-living-room-interior-modern-furniture.png') no-repeat center center;
+    background: url('images/mobile/baignoires.png') no-repeat center center;
     background-size: cover;
 }
 
 .conception .douches{
-    background: url('images/cabinets-and-wall-for-tv-in-living-room.png') no-repeat center center;
+    background: url('images/mobile/douches.png') no-repeat center center;
     background-size: cover;
 }
-
+.conception-type-group{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
 .conception-type{
+
     max-width:450px ;
     width: 100%;
     min-height:487px;
@@ -448,11 +489,6 @@ footer h6{
     .container{
         padding:0 2em;
     }
-    .conception-type-group {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
 
     .values{
         display: flex;
@@ -477,9 +513,15 @@ footer h6{
 }
 
 @media (min-width: 769px) {
+    .discover:before{
+        background: url("images/desktop/home.jpg") no-repeat center center;
+        background-size: cover;
+
+    }
     .burger{
         display: none;
     }
+
     .navbar-up{
         justify-content: space-between;
     }
@@ -493,6 +535,8 @@ footer h6{
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+
     }
     .conception-type-group {
         display: grid;
@@ -502,6 +546,7 @@ footer h6{
 
 }
 @media (min-width: 1201px) {
+
     .container{
         padding:0 132px;
     }
@@ -515,9 +560,18 @@ footer h6{
     }
     .meubles{
         justify-self: start;
+        background: url('images/desktop/meubles.jpg') no-repeat center center;
+        background-size: cover;
     }
+    .baignoires{
+        background: url('images/desktop/baignoires.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
     .douches{
         justify-self: end;
+        background: url('images/desktop/douches.jpg') no-repeat center center;
+        background-size: cover;
     }
     .outil3D {
         position: relative;
@@ -540,17 +594,24 @@ footer h6{
     .selection-group{
         display: grid;
         grid-template-columns: repeat(5,1fr);
+        justify-items: center;
+        grid-gap:50px;
+    }
+    .selection img,.selection{
+        width: 100%;
     }
     .articles{
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        grid-gap: 60px
+        grid-gap: 60px;
+        justify-items: center;
     }
     .about{
         display: flex;
     }
-    .about .img{
-        width: 100%;
+    .about img{
+        flex: 1;
+        width: 50%;
     }
     .about,.about h3{
         text-align: left;
@@ -558,5 +619,6 @@ footer h6{
 
     .about .description{
         padding: 0 2em;
+        flex:1;
     }
 }
