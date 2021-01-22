@@ -96,10 +96,9 @@ nav .icon:hover{
     font-family: "Sofia",sans-serif;
     color: var(--primary);
     position: absolute;
-    width: 100%;
-    text-align: center;
+    right:50%;
+    transform: translateX(50%);
     font-size: 2em;
-    z-index: -2;
 }
 .navbar{
     display: flex;
@@ -123,7 +122,8 @@ nav .icon:hover{
 .burger{
     position: absolute;
     left:16px;
-    top: 25px;
+    top:50%;
+    transform: translateY(-50%);
 }
 .navbar-down{
     display: none;
