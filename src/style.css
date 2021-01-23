@@ -10,6 +10,7 @@ body{
     --secondary : #921b00;
     font-family: "Raleway",sans-serif;
     text-align: center;
+
 }
 a{
     text-decoration: none;
@@ -51,6 +52,9 @@ nav .icon:hover{
 }
 /************************************************* BUTTON *********************************/
 
+.search{
+    display: none;
+}
 .btn{
     display: inline-block;
     text-align: center;
@@ -62,6 +66,7 @@ nav .icon:hover{
     color:white;
     background: rgba(0,0,0,0);
     border: 2px white solid;
+    cursor: pointer;
 }
 
 .btn-discover:hover{
@@ -147,11 +152,12 @@ nav .icon:hover{
     text-align: center;
     border-radius: 50%;
     position: absolute;
-    top:-15px;
-    right:-5px;
+    top:5px;
+    right:-2px;
 }
-.cart p{
+.cart-link p{
     display: none;
+    margin-left: 1em;
 }
 .nav-item{
     margin:0 0.75em
@@ -332,10 +338,14 @@ h3{
 /************************************************** ARTICLE **************************************/
 .blog{
     margin-bottom: 4em;
+
 }
 
 .articles{
     display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
 }
 .article img{
     width: 100%;
@@ -423,6 +433,10 @@ footer{
 }
 .newsletter{
     padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .join{
@@ -439,23 +453,23 @@ footer{
 }
 
 .newsletter-form{
-    width:294px;
-    height: 50px;
+    display: flex;
+    margin-top: 1em;
 }
 .newsletter input{
-    height: 100%;
     border: none;
-    padding: 0;
+    padding: 1em;
 }
 
 ::placeholder{
-    font-size: 0.75em;
+    font-family: "Raleway",sans-serif;
 }
 .newsletter button{
-    height:100%;
     color:white;
     background: black;
     padding: 1em;
+    font-family: "Raleway",sans-serif;
+
 }
 footer h4{
     font-weight: 400;
@@ -546,7 +560,18 @@ footer h6{
 
 }
 @media (min-width: 1201px) {
-
+    .search{
+        display: block;
+    }
+    .cart-link{
+        display: flex;
+        align-items: center;
+    }
+    .cart span{
+    }
+    .cart-link p{
+        display: block;
+    }
     .container{
         padding:0 132px;
     }
@@ -577,7 +602,6 @@ footer h6{
         position: relative;
         height: 600px;
         overflow: hidden;
-        padding:0 -132px;
     }
     .outil3D h3{
         margin-top: 0;
