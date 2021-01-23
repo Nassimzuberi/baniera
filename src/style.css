@@ -528,7 +528,7 @@ footer h6{
 
 @media (min-width: 769px) {
     .discover:before{
-        background: url("images/desktop/home.jpg") no-repeat center center;
+        background: url("images/desktop/home.webp") no-repeat center center;
         background-size: cover;
 
     }
@@ -585,17 +585,17 @@ footer h6{
     }
     .meubles{
         justify-self: start;
-        background: url('images/desktop/meubles.jpg') no-repeat center center;
+        background: url('images/desktop/meubles.webp') no-repeat center center;
         background-size: cover;
     }
     .baignoires{
-        background: url('images/desktop/baignoires.jpg') no-repeat center center;
+        background: url('images/desktop/baignoires.webp') no-repeat center center;
         background-size: cover;
     }
 
     .douches{
         justify-self: end;
-        background: url('images/desktop/douches.jpg') no-repeat center center;
+        background: url('images/desktop/douches.webp') no-repeat center center;
         background-size: cover;
     }
     .outil3D {
